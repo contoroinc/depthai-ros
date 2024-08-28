@@ -228,9 +228,9 @@ void Camera::startDevice() {
                 camRunning = true;
             } else {
                 std::vector<dai::DeviceInfo> availableDevices = dai::Device::getAllAvailableDevices();
-                if(availableDevices.size() == 0) {
-                    throw std::runtime_error("No devices detected!");
-                }
+                // if(availableDevices.size() == 0) {
+                //     throw std::runtime_error("No devices detected!");
+                // }
                 dai::UsbSpeed speed = ph->getUSBSpeed();
 
                 for(const auto& info : availableDevices) {
